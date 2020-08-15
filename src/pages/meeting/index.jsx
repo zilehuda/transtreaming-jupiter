@@ -6,12 +6,17 @@ import "./meeting.css";
 import AgoraVideoCall from "../../components/AgoraVideoCall";
 import { AGORA_APP_ID } from "../../agora.config";
 import SpeechToText  from '../../components/SpeechToText/index';
+import ChatBox from '../../components/ChatBox/index';
+import socketIOClient from "socket.io-client";
+require('dotenv').config()
+const socket = socketIOClient(process.env.REACT_APP_EUROPA_BASE_URL);
 
 require('dotenv').config()
 
 
 
 class Meeting extends React.Component {
+  
   constructor(props) {
     super(props);
     this.videoProfile = Cookies.get("videoProfile").split(",")[0] || "480p_4";
@@ -20,6 +25,7 @@ class Meeting extends React.Component {
     this.attendeeMode = Cookies.get("attendeeMode") || "video";
     this.baseMode = Cookies.get("baseMode") || "avc";
     this.language = Cookies.get("language") || "en";
+    this.myText = undefined
     
     this.appId = AGORA_APP_ID;
     if (!this.appId) {
@@ -48,6 +54,22 @@ class Meeting extends React.Component {
           console.log(response);
       });
    
+  socket.on(this.uid, (data) => {
+    console.log("translated", data);
+    const translated_text_string = data.translated_text;
+      this.handlepartnerText(translated_text_string)
+      // setTranslatedText(translated_text_string)
+      // setTranslatedText(undefined)
+  });
+  }
+  
+
+  handlemyText = (textValue) => {
+    this.refs.chatBox._sendMyMessage(textValue)
+  }
+
+  handlepartnerText = (textValue) => {
+    this.refs.chatBox._sendMessage(textValue)
   }
 
   render() {
@@ -80,15 +102,25 @@ class Meeting extends React.Component {
             />
           </div>
           <div style={{marginBottom: "100px"}}>
-          <SpeechToText uid={this.uid}  language={this.language} roomid={this.channel}/>
+            <SpeechToText
+            uid={this.uid}
+            language={this.language}
+            roomid={this.channel}
+            onSetmyText={this.handlemyText.bind(this)}
+            onSetpartnerText={this.handlepartnerText.bind(this)}
+            />
+            </div>
           </div>
-        </div>
+          
         <div className="ag-footer">
           <a className="ag-href" href="https://www.agora.io">
             <span>Powered By Agora</span>
           </a>
           {/* <span>Talk to Support: 400 632 6626</span> */}
         </div>
+        <ChatBox
+          ref="chatBox"
+         />
       </div>
     );
   }
