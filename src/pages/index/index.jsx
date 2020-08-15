@@ -74,16 +74,23 @@ class Index extends React.Component {
                   <InputChannel onChange={this.handleChannel} placeholder="Input a room name here"></InputChannel>
                 </div>
               </div>
-              <div className="columns" >
+              <div className="columns">
+                <div className="column is-12">
+                  <LanguageOption
+                    onChange={val => this.setState({ language: val })}>
+                  </LanguageOption>
+                </div>
+              </div>
+              {/* <div className="columns" >
               <div className="column is-5 label-language">
               Select Language: 
                 </div>
                 <div className="column is-12">
-                  <LanguageOtion
+                  <LanguageOption
                     onChange={val => this.setState({ language: val })}>
-                  </LanguageOtion>
+                  </LanguageOption>
                 </div>
-                </div>
+              </div> */}
               <div className="columns" style={{display:"none"}}>
                 <div className="column is-12" style={{display:"none"}}>
                   <BaseOptions
@@ -315,7 +322,7 @@ class BaseOptions extends React.Component {
 }
 
 
-class LanguageOtion extends React.Component {
+class LanguageOption extends React.Component {
   constructor(props) {
     super(props)
     this._options = [
