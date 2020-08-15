@@ -1,9 +1,4 @@
-# Transtreaming Documentation
-
-Please refer to main github reposity for a complete transtreaming documentation
- - [Github Reposity](https://github.com/zilehuda/transtreaming)
- 
-# Jupiter (Translated Subtitles Using AgoraRTC SDK)
+# Transtreaming (Translated Subtitles Using AgoraRTC SDK)
 
 This tutorial describes how to run this app that translates voice of a person in a meeting with respect to other persons preferred language.
 
@@ -60,8 +55,16 @@ cd path/to/project
 # install dependency
 npm install
 ```
+5. Create an .env with the following details:
 
-5. Build and run the project:
+``` bash
+REACT_APP_EUROPA_BASE_URL=  'Url For the back end this system'
+```
+
+The code for the back end of the project is located on the following repo  [Transtreaming Back End](https://github.com/zilehuda/transtreaming-europa)
+
+
+6. Build and run the project:
 
 Use `start` for a local build. View the application in your browser with the URL `http://localhost:3000`
 
@@ -78,6 +81,9 @@ npm run build
 
 ## Application Flow
 1. After setting up the application as described in the previous step open the application in the desired browser and Enter the room id.
+
+![User Page][user-page]
+
 2. Select your prefered language (You will recieve translated subtitles of the language you choose).
 3. Repeat step 1 and 2 on the other attendee browser.
 4. Now as both the attendees speak they will see translated text of the other attendee on thier screen.
@@ -89,3 +95,8 @@ npm run build
 
 ## License
 This software is licensed under the MIT License (MIT). [View the license](LICENSE.md).
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[user-page]: user-page.PNG
+[room]: room.png
