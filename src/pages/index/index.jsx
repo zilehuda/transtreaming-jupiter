@@ -64,7 +64,7 @@ class Index extends React.Component {
         <div className="ag-main">
           <section className="login-wrapper">
             <div className="login-header">
-              <img src={require('../../assets/images/ag-logo.png')} alt="" />
+              <img src={require('../../assets/images/transtreaming-logo.png')} alt="" />
               <p className="login-title">Transtreaming Powered By AgoraWeb</p>
               <p className="login-subtitle">Powering Real-Time Communications</p>
             </div>
@@ -78,7 +78,7 @@ class Index extends React.Component {
               <div className="column is-5 label-language">
               Select Language: 
                 </div>
-                <div className="column is-7">
+                <div className="column is-12">
                   <BaseOptions2
                     onChange={val => this.setState({ language: val })}>
                   </BaseOptions2>
@@ -150,7 +150,8 @@ class Index extends React.Component {
             <span>Powered By Agora</span>
           </a>
           <div>
-            <span>Develop by <a href="http://zilehuda.com" target="_blank">ZILAY</a> </span>
+            <span><a href="https://github.com/zilehuda/transtreaming" target="_blank">Github</a> </span>
+            {/* <span>Develop by <a href="http://zilehuda.com" target="_blank">ZILAY</a> </span> */}
             {/* <span className="ag-contact">sales@agora.io</span> */}
           </div>
         </div>
