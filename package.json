@@ -53,6 +53,6 @@
     "url": "https://github.com/AgoraIO/OpenAgoraWeb-React/issues"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "8.2.0"
   }
 }
