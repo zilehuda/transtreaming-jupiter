@@ -79,9 +79,9 @@ class Index extends React.Component {
               Select Language: 
                 </div>
                 <div className="column is-12">
-                  <BaseOptions2
+                  <LanguageOtion
                     onChange={val => this.setState({ language: val })}>
-                  </BaseOptions2>
+                  </LanguageOtion>
                 </div>
                 </div>
               <div className="columns" style={{display:"none"}}>
@@ -315,7 +315,7 @@ class BaseOptions extends React.Component {
 }
 
 
-class BaseOptions2 extends React.Component {
+class LanguageOtion extends React.Component {
   constructor(props) {
     super(props)
     this._options = [
