@@ -75,12 +75,14 @@ class Index extends React.Component {
                 </div>
               </div>
               <div className="columns">
-                <div className="column is-12">
+                <div className="column is-12 language-dropdown">
                   <LanguageOption
                     onChange={val => this.setState({ language: val })}>
                   </LanguageOption>
                 </div>
               </div>
+              
+        
               {/* <div className="columns" >
               <div className="column is-5 label-language">
               Select Language: 

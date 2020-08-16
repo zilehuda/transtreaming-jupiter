@@ -78,13 +78,13 @@ class Meeting extends React.Component {
           <div className="ag-header-lead">
             <img
               className="header-logo"
-              src={require("../../assets/images/ag-logo.png")}
+              src={require("../../assets/images/transtreaming-logo.png")}
               alt=""
             />
-            <span>Transtreaming</span>
+            
           </div>
           <div className="ag-header-msg">
-            Room:&nbsp;<span id="room-name">{this.channel}</span>
+            Room ID:&nbsp;<span id="room-name">{this.channel}</span>
           </div>
         </div>
         <div className="ag-main">
@@ -100,7 +100,7 @@ class Meeting extends React.Component {
               uid={this.uid}
             />
           </div>
-          <div style={{marginBottom: "100px"}}>
+          <div >
             <SpeechToText
             uid={this.uid}
             language={this.language}

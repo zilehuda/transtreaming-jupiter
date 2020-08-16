@@ -306,3 +306,34 @@
 .validate-icon>.ag-icon-valid {
   color: #7ED321;
 }
+
+/* .ag-rounded.button {
+  width: 340%;
+}
+
+.dropdown-menu {
+  width: 340%;
+} */
+.dropdown-trigger {
+  width: 50%;
+}
+
+.language-dropdown {
+  width: 340% !important;
+}
+
+.dropdown {
+  width: 16.5%;
+}
+
+#language {
+  width: 340%;
+}
+.dropdown-content {
+  width: 168%;
+}
+
+
+.ag-btn.audioControlBtn {
+  display: none;
+}
