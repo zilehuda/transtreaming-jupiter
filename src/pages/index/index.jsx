@@ -65,7 +65,7 @@ class Index extends React.Component {
           <section className="login-wrapper">
             <div className="login-header">
               <img src={require('../../assets/images/transtreaming-logo.png')} alt="" />
-              <p className="login-title">Transtreaming Powered By AgoraWeb</p>
+              <p className="login-title">Powered By AgoraWeb</p>
               <p className="login-subtitle">Powering Real-Time Communications</p>
             </div>
             <div className="login-body">
