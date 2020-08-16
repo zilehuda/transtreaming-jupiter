@@ -23,6 +23,8 @@ const SpeechToText = (props) => {
      })
   }
 
+  // sc-user-input--text
+
   if (finalTranscript.length > 0) {
       console.log(finalTranscript)
       const temp = finalTranscript;
@@ -52,14 +54,6 @@ const SpeechToText = (props) => {
 
   
 
-  return (
-    <div>
-      <button onClick={startListening()} style={{display: "none"}}>Start</button>
-      <button onClick={SpeechRecognition.stopListening} style={{display: "none"}}>Stop</button>
-      
-      <p style={{color: "white"}}>{translatedText}</p>
-     
-    </div>
-  )
+  return (null)
 }
 export default SpeechToText

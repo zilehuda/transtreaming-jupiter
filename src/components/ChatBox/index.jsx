@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Launcher} from 'react-chat-window'
+import './chatbox.css'
 
 class ChatBox extends React.Component {
 
@@ -9,6 +10,7 @@ class ChatBox extends React.Component {
       messageList: []
     };
   }
+  
 
   _onMessageWasSent(message) {
     this.setState({
