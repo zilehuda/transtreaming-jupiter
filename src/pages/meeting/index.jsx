@@ -4,7 +4,6 @@ import axios from 'axios';
 
 import "./meeting.css";
 import AgoraVideoCall from "../../components/AgoraVideoCall";
-import { AGORA_APP_ID } from "../../agora.config";
 import SpeechToText  from '../../components/SpeechToText/index';
 import ChatBox from '../../components/ChatBox/index';
 import socketIOClient from "socket.io-client";
