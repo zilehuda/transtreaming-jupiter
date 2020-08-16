@@ -1,4 +1,8 @@
+# Transtreaming Documentation
 
+Please refer to main github reposity for a complete transtreaming documentation
+ - [Github Reposity](https://github.com/zilehuda/transtreaming)
+ 
 # Transtreaming (Translated Subtitles Using AgoraRTC SDK)
 
 This tutorial describes how to run this app that translates voice of a person in a meeting with respect to other persons preferred language.
