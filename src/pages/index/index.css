@@ -314,24 +314,28 @@
 .dropdown-menu {
   width: 340%;
 } */
-.dropdown-trigger {
+ .dropdown-trigger {
   width: 50%;
 }
 
-.language-dropdown {
-  width: 340% !important;
-}
+
 
 .dropdown {
   width: 16.5%;
 }
 
 #language {
-  width: 340%;
+  width: 1210%;
 }
 .dropdown-content {
   width: 168%;
-}
+
+
+} 
+
+/* .language-dropdown {
+  width: 340% !important;
+} */
 
 
 .ag-btn.audioControlBtn {
