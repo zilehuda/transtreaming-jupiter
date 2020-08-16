@@ -27,7 +27,7 @@ class Meeting extends React.Component {
     this.language = Cookies.get("language") || "en";
     this.myText = undefined
     
-    this.appId = AGORA_APP_ID;
+    this.appId = process.env.REACT_APP_AGORA_APP_ID;
     if (!this.appId) {
       return alert("Get App ID first!");
     }

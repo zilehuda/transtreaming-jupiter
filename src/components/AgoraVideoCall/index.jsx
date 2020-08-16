@@ -35,7 +35,6 @@ class AgoraCanvas extends React.Component {
   }
 
   componentWillMount() {
-    return true
     let $ = this.props
     // init AgoraRTC local client
     this.client = AgoraRTC.createClient({ mode: $.transcode })
