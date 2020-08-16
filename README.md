@@ -1,3 +1,4 @@
+
 # Transtreaming (Translated Subtitles Using AgoraRTC SDK)
 
 This tutorial describes how to run this app that translates voice of a person in a meeting with respect to other persons preferred language.
@@ -30,40 +31,35 @@ To build and run the sample application, you must obtain an app ID:
 2. Navigate in the dashboard tree on the left to **Projects** > **Project List**.
 3. Copy the app ID that you obtained from the dashboard into a text file. You will use this when you launch the app.
 
-
-### Update and Run the Sample Application 
-
-1. Edit the [`src/agora.config.js`](src/agora.config.js) file. In the `AGORA_APP_ID` declaration, update `Your App ID` with your app ID.
-
+### Getting Started
+1. Copy the [.env.example](.env.example) and rename it to **.env**
 ```JavaScript
-export const AGORA_APP_ID = 'Your App ID'
+REACT_APP_EUROPA_BASE_URL=
+REACT_APP_AGORA_APP_ID=
 ```
 
-2. Download the [Agora Web Video SDK](https://www.agora.io/en/download/). Unzip the downloaded SDK package and copy the `AgoraRTC-*.js` file into the sample application's `/src/library/` folder. Rename the file to `AgoraRTC.js`.
+2. In **.env** set **REACT_APP_AGORA_APP_ID** with your app id.
 
-	**Note:** CDN can now be used to retrieve the latest SDK. You do not have to re-download SDK updates.
-		
-3. Open the terminal and navigate to your project folder.
+```JavaScript
+REACT_APP_AGORA_APP_ID = 'Your App ID'
+```
 
+3. In **.env** set **REACT_APP_EUROPA_BASE_URL** with the europa base url.
+```JavaScript
+REACT_APP_EUROPA_BASE_URL = 'Your Europa Base url'
+```
+The code for the back end of the project is located on the following repo  [Transtreaming Back End](https://github.com/zilehuda/transtreaming-europa)
+
+4. Open the terminal and navigate to your project folder.
 ``` bash
 cd path/to/project
 ```
-
-4. Use `npm` to install the dependencies:
+5. Use `npm` to install the dependencies:
 
 ``` bash
 # install dependency
 npm install
 ```
-5. Create an .env with the following details:
-
-``` bash
-REACT_APP_EUROPA_BASE_URL=  'Url For the back end this system'
-```
-
-The code for the back end of the project is located on the following repo  [Transtreaming Back End](https://github.com/zilehuda/transtreaming-europa)
-
-
 6. Build and run the project:
 
 Use `start` for a local build. View the application in your browser with the URL `http://localhost:3000`
