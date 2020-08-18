@@ -3,11 +3,12 @@ import {Launcher} from 'react-chat-window'
 import './chatbox.css'
 
 class ChatBox extends React.Component {
-
+  
   constructor() {
     super();
     this.state = {
-      messageList: []
+      messageList: [],
+      _isOpen: false
     };
   }
   
@@ -19,27 +20,38 @@ class ChatBox extends React.Component {
   }
 
   _sendMyMessage(text) {
-    if (text.length > 0) {
-      this.setState({
-        messageList: [...this.state.messageList, {
-          author: 'me',
-          type: 'text',
-          data: { text }
-        }]
-      })
+    if(this.state._isOpen) {
+      if (text.length > 0) {
+        this.setState({
+          messageList: [...this.state.messageList, {
+            author: 'me',
+            type: 'text',
+            data: { text }
+          }]
+        })
+      }
     }
+    
   }
 
   _sendMessage(text) {
-    if (text.length > 0) {
-      this.setState({
-        messageList: [...this.state.messageList, {
-          author: 'them',
-          type: 'text',
-          data: { text }
-        }]
-      })
+    if(this.state._isOpen) {
+      if (text.length > 0) {
+        this.setState({
+          messageList: [...this.state.messageList, {
+            author: 'them',
+            type: 'text',
+            data: { text }
+          }]
+        })
+      }
     }
+  }
+
+  _handleClick() {
+    this.setState({
+      _isOpen: !this.state._isOpen
+    })
   }
 
   render() {
@@ -54,6 +66,8 @@ class ChatBox extends React.Component {
         showEmoji
         mute={true}
         showEmoji={false}
+        isOpen={this.state._isOpen}
+        handleClick={this._handleClick.bind(this)}
       />
     </div>)
   }
